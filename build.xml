@@ -1,0 +1,17 @@
+<project name="example" default="compile">
+	<target name="clean">
+		<delete>
+			<fileset dir="." includes="**/*.class/" defaultexcludes="no"/>
+		</delete>
+		<delete>
+			<fileset dir="." includes="**/*.*~/" defaultexcludes="no"/>
+		</delete>
+		<delete>
+			<fileset dir="." includes="**/*.txt/" defaultexcludes="no"/>
+		</delete>
+	</target>
+	
+	<target name="compile" depends="clean">
+		<javac srcdir="."/>
+	</target>
+</project> 
